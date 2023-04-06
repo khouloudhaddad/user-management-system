@@ -31,4 +31,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Add angular material
 > ng add @angular/material [link refrence](https://material.angular.io/guide/getting-started)
 
+# Install json server & fake data
+
+> npm i -g json-server <br/>
+> json-server --watch db.json
+
 
