@@ -1,1 +1,77 @@
-<p>emp-add-edit works!</p>
+<div mat-dialog-title>
+  <h1>User Form</h1>
+</div>
+<div mat-dialog-content class="wrapper">
+  <div class="row">
+
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input matInput type="text" placeholder="Ex. John">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input matInput type="text" placeholder="Ex. Doe">
+    </mat-form-field>
+
+  </div>
+
+  <div class="row">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" placeholder="Ex. john@doe.com">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+  </div>
+
+  <div class="row mb-10">
+    <mat-radio-group aria-label="Select an option">
+      <mat-label><b>Gender</b></mat-label>
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+      <mat-radio-button value="other">Other</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Education</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let education of education" [value]="education">
+          {{education}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Company</mat-label>
+      <input matInput type="text" placeholder="Ex. Microsoft">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Experience</mat-label>
+      <input matInput type="text" placeholder="Ex. 4" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Package</mat-label>
+      <input matInput type="text" placeholder="Ex. 12" type="number">
+      <mat-hint>In TND</mat-hint>
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions class="action">
+  <button mat-raised-button>Cancel</button>
+  <button mat-raised-button color="primary">Save</button>
+</div>

@@ -1,0 +1,26 @@
+.wrapper{
+
+  padding-top: 10px;
+
+  .row{
+    display: flex;
+    gap: 10px;
+
+    mat-form-field{
+      width: 100%;
+    }
+  }
+
+}
+
+.action{
+  padding: 0 25px 20px;
+  button{
+    flex: 1;
+  }
+}
+
+.mb-10{
+  margin-bottom: 10px;
+}
+

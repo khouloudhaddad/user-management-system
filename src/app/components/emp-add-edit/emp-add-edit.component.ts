@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class EmpAddEditComponent {
 
+  education: string[] = [
+    "Matric",
+    "Diploma",
+    "Intermediate",
+    "Graduate",
+    "Post Graduate"
+  ]
+  
 }
