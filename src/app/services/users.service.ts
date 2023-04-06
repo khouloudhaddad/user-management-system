@@ -12,6 +12,17 @@ export class UsersService {
   addUser(data: any): Observable<any>{
 
     return this._http.post("http://localhost:3000/users", data);
-    
+
+  }
+
+  getUserList(): Observable<any>{
+
+    return this._http.get("http://localhost:3000/users");
+
+  }
+
+
+  deleteUser(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/users/${id}`);
   }
 }
