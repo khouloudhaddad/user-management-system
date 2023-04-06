@@ -19,6 +19,10 @@ import { EmpAddEditComponent } from './components/emp-add-edit/emp-add-edit.comp
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     MatSelectModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
